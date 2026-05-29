@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-jakarta: "Plus Jakarta Sans", "Inter", sans-serif;
+  --animate-marquee-left: marquee-left 40s linear infinite;
+  --animate-marquee-right: marquee-right 40s linear infinite;
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+.hover-pause:hover .animate-marquee-left,
+.hover-pause:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
