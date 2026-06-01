@@ -283,15 +283,18 @@ async function start() {
     }
   }));
 
-  if (process.env.NODE_ENV !== "production") {
-    const { createServer: createViteServer } = await import("vite");
+  const distPath = path.join(process.cwd(), "dist");
+  const hasBuild = fs.existsSync(path.join(distPath, "index.html"));
+
+  if (process.env.NODE_ENV !== "production" && !hasBuild) {
+    const viteModuleName = "vite";
+    const { createServer: createViteServer } = await import(viteModuleName);
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath, {
       setHeaders: (res, filePath) => {
         if (filePath.endsWith(".webp")) {

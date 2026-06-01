@@ -111,12 +111,12 @@ export default function Hero({ onSwitchToHeritage, onPlanVisit, weatherDescripti
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="inline-flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-black/15 backdrop-blur-md border border-white/10 shadow-xl mt-4 max-w-full"
+          className="flex flex-col sm:grid sm:grid-cols-3 lg:flex lg:flex-row items-stretch sm:items-center gap-2 p-2 sm:p-1.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/10 shadow-xl mt-4 w-full sm:max-w-2xl lg:max-w-none lg:w-auto"
           id="hero-glassmorphism-actions"
         >
           <button
             onClick={onSwitchToHeritage}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#056608] bg-white hover:bg-white/95 transition-all active:scale-95 cursor-pointer shadow-md btn-primary-custom"
+            className="flex items-center justify-center gap-1.5 px-3.5 py-2.5 sm:py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#056608] bg-white hover:bg-white/95 transition-all active:scale-95 cursor-pointer shadow-md btn-primary-custom w-full lg:w-auto text-center whitespace-nowrap"
             id="hero-btn-explore"
           >
             <Compass className="w-3 h-3 text-[#056608]" />
@@ -125,7 +125,7 @@ export default function Hero({ onSwitchToHeritage, onPlanVisit, weatherDescripti
           
           <button
             onClick={onSwitchToHeritage}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFD54F] bg-transparent hover:bg-white/15 border border-[#FFD54F] transition-all active:scale-95 cursor-pointer btn-secondary-custom"
+            className="flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFD54F] bg-transparent hover:bg-white/15 border border-[#FFD54F] transition-all active:scale-95 cursor-pointer btn-secondary-custom w-full lg:w-auto text-center whitespace-nowrap"
             id="hero-btn-heritage"
           >
             <Sparkles className="w-3 h-3 text-[#FFD54F]" />
@@ -134,7 +134,7 @@ export default function Hero({ onSwitchToHeritage, onPlanVisit, weatherDescripti
 
           <button
             onClick={onPlanVisit}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFD54F] bg-transparent hover:bg-white/15 border border-[#FFD54F] transition-all active:scale-95 cursor-pointer btn-secondary-custom"
+            className="flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-1.5 rounded-xl text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#FFD54F] bg-transparent hover:bg-white/15 border border-[#FFD54F] transition-all active:scale-95 cursor-pointer btn-secondary-custom w-full lg:w-auto text-center whitespace-nowrap"
             id="hero-btn-music"
           >
             <Flame className="w-3 h-3 text-[#FFD54F]" />

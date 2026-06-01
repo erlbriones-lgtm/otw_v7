@@ -819,7 +819,7 @@ export default function App() {
                    
                    {/* Fanned Cards Arena */}
                    <div 
-                     className="w-full relative h-[400px] md:h-[510px] max-w-3xl mx-auto flex items-center justify-center overflow-visible select-none [--deck-offset:75px] md:[--deck-offset:160px] [--deck-y-offset:14px] md:[--deck-y-offset:30px]" 
+                     className="w-full relative h-[360px] sm:h-[400px] md:h-[510px] max-w-3xl mx-auto flex items-center justify-center overflow-visible select-none [--deck-offset:32px] sm:[--deck-offset:65px] md:[--deck-offset:125px] lg:[--deck-offset:160px] [--deck-y-offset:10px] sm:[--deck-y-offset:16px] md:[--deck-y-offset:24px] lg:[--deck-y-offset:30px]" 
                      id="barangay-fan-deck"
                    >
                      
